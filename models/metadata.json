@@ -1,0 +1,39 @@
+{
+  "model_type": "LinearRegression",
+  "target": "close do dia seguinte (USD)",
+  "n_lags": 7,
+  "features": [
+    "lag_1",
+    "lag_2",
+    "lag_3",
+    "lag_4",
+    "lag_5",
+    "lag_6",
+    "lag_7"
+  ],
+  "trained_at": "2026-10-05T18:39:52+00:00",
+  "data_range": [
+    "2018-01-01",
+    "2026-10-04"
+  ],
+  "metrics_test": {
+    "model": {
+      "mae": 1394.77,
+      "rmse": 1972.81
+    },
+    "naive_baseline": {
+      "mae": 1391.77,
+      "rmse": 1968.3
+    }
+  },
+  "last_date": "2026-10-04",
+  "last_closes": [
+    83500.01,
+    83663.66,
+    83623.6,
+    84880.05,
+    84518.01,
+    84753.56,
+    86530.0
+  ]
+}

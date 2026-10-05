@@ -1,0 +1,16 @@
+services:
+  trainer:
+    build: ./trainer
+    volumes:
+      - ./data:/app/data:ro
+      - ./models:/app/models
+
+  api:
+    build: ./api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./models:/app/models:ro
+    depends_on:
+      trainer:
+        condition: service_completed_successfully
